@@ -10,8 +10,8 @@ const recipeList = {
     `,
     controller: ["RecipeService", function(RecipeService) {
         const vm = this;
-        vm.data = RecipeService.getSearch();
-        console.log(vm.data);
+        vm.data = RecipeService.getSearch(); //get the data
+        console.log(vm.data); //log the data that you are searcing for
     }]
 }
 

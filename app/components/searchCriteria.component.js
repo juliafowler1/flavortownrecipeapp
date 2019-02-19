@@ -20,12 +20,5 @@ const searchCriteria = {
     <p>{{$ctrl.data.$$state.value.data.hits[1].recipe.label}}</p>
     <img src={{$ctrl.data.$$state.value.data.hits[1].recipe.image}}></img> */
 
-
-    // <section ng-repeat="items in $ctrl.data.$$state.value.data.hits">
-    // <p>{{items.recipe.label}}</p>
-    // <img src={{items.recipe.image}}>
-    // <p>URL: <a href="">{{items.recipe.url}}</a></p>
-    // </section>
-
 angular.module("RecipeApp")
     .component("searchCriteria", searchCriteria);
