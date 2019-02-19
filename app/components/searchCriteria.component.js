@@ -8,8 +8,8 @@ const searchCriteria = {
     controller: ["RecipeService", function(RecipeService) {
         const vm = this;
         vm.getApi = function() {
-                vm.data = RecipeService.setsearch(vm.search);
-                console.log(vm.data);
+                vm.data = RecipeService.setsearch(vm.search); //set the data
+                console.log(vm.data); //console log the data
             }
     }]
 }
