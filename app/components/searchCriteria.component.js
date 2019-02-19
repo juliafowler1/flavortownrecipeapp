@@ -8,14 +8,17 @@ const searchCriteria = {
     controller: ["RecipeService", function(RecipeService) {
         const vm = this;
         vm.getApi = function() {
-            RecipeService.getredditdata().then(function(response) {
-                console.log(response);
-            })
-        }
+                vm.data = RecipeService.setsearch(vm.search);
+                console.log(vm.data);
+            }
     }]
 }
 
 
+/* <p>{{$ctrl.data.$$state.value.data.hits[0].recipe.label}}</p>
+    <img src={{$ctrl.data.$$state.value.data.hits[0].recipe.image}}>
+    <p>{{$ctrl.data.$$state.value.data.hits[1].recipe.label}}</p>
+    <img src={{$ctrl.data.$$state.value.data.hits[1].recipe.image}}></img> */
 
 angular.module("RecipeApp")
     .component("searchCriteria", searchCriteria);
