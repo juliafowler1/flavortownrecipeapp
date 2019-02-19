@@ -1,11 +1,6 @@
 "use strict";
 function RecipeService($location, $http) {
     const self = this;
-<<<<<<< HEAD
-    self.search = search
-    self.getredditdata = function() {
-        return $http({
-=======
     self.setsearch = function(search) { //sets the data
         self.search = search; //declares the what the search parameter is
         $location.path("/recipe-list"); //sends you to the recipe list
@@ -17,7 +12,6 @@ function RecipeService($location, $http) {
     }
     self.getredditdata = function() { //fetch the data
         return $http({ //go to this specific URL and get the data
->>>>>>> GetApi
             url: "https://api.edamam.com/search?q="+self.search+"&app_id=8b7bd8f2&app_key=8dc778864de33e6b841e8ebdd5873e87&from=0&to=5&calories=591-722&health=alcohol-free",
             method: "GET"
         }).then(function(response){ //if the response is successful
