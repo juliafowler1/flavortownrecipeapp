@@ -2,6 +2,7 @@
 const searchCriteria = {
     template: `
     <p>FROM SEARCH CRITERIA</p>
+    <input type="text" ng-model="$ctrl.search">
     <button ng-click="$ctrl.getApi();">Search</button>
     `,
     controller: ["RecipeService", function(RecipeService) {
