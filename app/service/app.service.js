@@ -1,9 +1,14 @@
 "use strict";
 function RecipeService($location, $http) {
     const self = this;
-    self.getsearch = function(search) {
+    self.setsearch = function(search) {
         self.search = search;
+        $location.path("/recipe-list");
+        self.data = self.getredditdata();
         return self.getredditdata();
+    }
+    self.getSearch = function() {
+        return self.data;
     }
     self.getredditdata = function() {
         return $http({
