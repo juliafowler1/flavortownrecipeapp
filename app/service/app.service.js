@@ -2,9 +2,9 @@
 function RecipeService($location, $http) {
     const self = this;
     self.favorites = [];
-    self.setsearch = function(search) { //sets the data from the search button
+    self.setsearch = function(search) { //sets the data from what you entered into the search button
         self.search = search; //declares the what the search parameter is
-        $location.path("/recipe-list"); //sends you to the recipe list
+        $location.path("/recipe-list"); //sends you to the recipe list page
         self.data = self.getredditdata();  //declares what vm. data means (all your self getredditdata)
         return self.getredditdata(); 
     }
@@ -20,19 +20,19 @@ function RecipeService($location, $http) {
             return self.data; //return the data
         })
     }
-    self.setFavs = function(items) {
-        self.favorites.push(items);        
+    self.setFavs = function(items) { //sets the data for the favorites list
+        self.favorites.push(items);  //pushes the favorite item into a new favorites list
     }
-    self.removeFavs = function(index) {
-        self.favorites.splice(index, 1);
+    self.removeFavs = function(index) { //removes the data from the favorites list from the index
+        self.favorites.splice(index, 1); //splices the data from the array
     }
-    self.getFavs = function() {
-        return self.favorites;
+    self.getFavs = function() { //gets the data that for the favorites list
+        return self.favorites; //returns the data so that the page can read it
     }
 }
 
 
 
-
+//service getter syntax
 angular.module("RecipeApp")
     .service("RecipeService", RecipeService);
