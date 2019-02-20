@@ -22,7 +22,7 @@ function RecipeService($location, $http) {
     }
     self.getredditdata = function() { //fetch the data from the search button
         return $http({ //go to this specific URL and get the data
-            url: "https://api.edamam.com/search?q="+self.search+"&app_id=8b7bd8f2&app_key=8dc778864de33e6b841e8ebdd5873e87"+self.health+self.diet,
+            url: "https://api.edamam.com/search?q="+self.search+"&app_id=8b7bd8f2&app_key=8dc778864de33e6b841e8ebdd5873e87&from=0&to=5"+self.health+self.diet,
             method: "GET"
         }).then(function(response){ //if the response is successful
             self.data=response; //set the response to self.data

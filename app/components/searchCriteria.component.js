@@ -1,30 +1,6 @@
 "use strict";
 const searchCriteria = {
-    template: `
-    <p>FROM SEARCH CRITERIA</p>
-
-    <input type="text" ng-model="$ctrl.search">
-
-<p>Health restrictions:</p>
-    <select ng-model="$ctrl.health">
-        <option value="0" >Vegetarian</option>
-        <option value="1">Gluten-free</option>
-        <option value="2">Alcohol-free</option>
-        <option value="3">Peanut-free</option>
-    </select>
-<p>You selected: {{$ctrl.health}}</p>
-
-<p>Dietary restrictions:</p>
-    <select ng-model="$ctrl.diet">
-        <option value="0" >Balanced</option>
-        <option value="1">Low-fat</option>
-        <option value="2">High-Protein</option>
-        <option value="3">Low-carb</option>
-    </select>
-<p>You selected: {{$ctrl.diet}}</p>
-
-    <button ng-click="$ctrl.getApi();">Search</button>
-    `,
+    templateUrl: "app/components/searchCriteria.html",
     controller: ["RecipeService", function (RecipeService) {
         const vm = this;
 

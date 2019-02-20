@@ -1,14 +1,6 @@
 "use strict";
 const favoritesPage = {
-    template:`<p>HI FAVORITES PAGE</p>
-    
-    <section ng-repeat="fav in $ctrl.favorites track by $index">
-    <p>{{fav.recipe.label}}</p>
-    <img src={{fav.recipe.image}}>
-    <p>URL: <a href="">{{fav.recipe.url}}</a></p>
-    <button ng-click="$ctrl.remFavs($index)">X</button>
-    </section>
-    `,
+    templateUrl: "app/components/favoritesPage.html",
     controller: ["RecipeService", function(RecipeService) {
         const vm = this;
         // vm.$onInit = function(){ don't think we need this

@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Captivating Culinary Creations</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- this following will set up all our anchor tags -->
-    <a href="#!/favorites-page">FAVORITES PAGE</a>
-    <a href="#!/recipe-list">RECIPE LIST</a>
-    <a href="#!/search-criteria">SEARCH CRITERIA</a>
-    <ng-view></ng-view>
-    <!-- ^this is where all of our components will show up -->
+    <div class="bg">
+        <nav class="navBar">
+            <!-- this following will set up all our anchor tags -->
+            <a href="#!/favorites-page">FAVORITES PAGE</a>
+            <a href="#!/recipe-list">RECIPE LIST</a>
+            <a href="#!/search-criteria">SEARCH CRITERIA</a>
+            <ng-view></ng-view>
+            <!-- ^this is where all of our components will show up -->
+        </nav>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>

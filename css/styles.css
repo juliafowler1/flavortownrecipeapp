@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One&effect=fire-animation');
+@import url('https://fonts.googleapis.com/css?family=Faster+One%7CFugaz+One');
+
+html {
+    font-family: 'Fugaz One', cursive;
+    width: 100vw;
+    height: 100vh;    
+
+}
+h4 {
+    font-size: 4em;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+.searchCriteria {
+    border: solid green;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.restriction {
+    margin-bottom: 10px;
+}
+
+.searchInput {
+    width: 50%;
+    border-radius: 15px;
+
+}
+
+button {
+    font-family: 'Fugaz One', cursive;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+
+.bg {
+    background-image: url("guyfieri.jpg");
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.searchBar {
+    background-color:black;
+    border: solid purple;
+    opacity: .5;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.moreInfo {
+    /* display: fixed; */
+    z-index: 500;
+    position: absolute;
+    background-color: white;
+    border: solid blue;
+    top: 0;
+}
+
+
+
+.recipeCard {
+    border: solid red;
+}
