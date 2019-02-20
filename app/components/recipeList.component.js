@@ -6,7 +6,7 @@ const recipeList = {
     <p>{{items.recipe.label}}</p>
     <button class="heart" ng-click="$ctrl.addFav(items)">HEARTTTTT</button>
     <img src={{items.recipe.image}}>
-    <p>URL: <a href="">{{items.recipe.url}}</a></p>
+    <p>URL: <a href="{{items.recipe.url}}">{{items.recipe.url}}</a></p>
     <button ng-click="$ctrl.moreRecipe(items);">+</button>
     </section>
 
@@ -19,7 +19,7 @@ const recipeList = {
     <p>Preptime: {{$ctrl.expand.totalTime}} minutes</p>
     <p>Serving Size: {{$ctrl.expand.recipe.yield}}</p>
     <p>Health Labels: {{$ctrl.expand.recipe.healthLabels}}</p>
-    <p>URL: <a href="">{{$ctrl.expand.recipe.url}}</a></p>
+    <p>URL: <a href="{{$ctrl.expand.recipe.url}}">{{$ctrl.expand.recipe.url}}</a></p>
     <button ng-click="$ctrl.hideRecipe()">X</button>
     </section>
     `,
