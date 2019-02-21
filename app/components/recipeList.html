@@ -1,23 +1,37 @@
 <!-- <div class="recipe"> -->
     <h4 class="font-effect-fire-animation title">RIGHTEOUS RECIPES</h4>
 
+    <div class="recipeContainer">
     <section class="recipeCard" ng-repeat="items in $ctrl.data.$$state.value.data.hits track by $index">
-        <p>{{items.recipe.label}}</p>
-        <button class="heart" ng-click="$ctrl.addFav(items)">DYNAMITE</button>
-        <img src={{items.recipe.image}}>
-        <p>URL: <a href="{{items.recipe.url}}">{{items.recipe.url}}</a></p>
-        <button ng-click="$ctrl.moreRecipe(items);">+</button>
+        <div class="recipeTitle">
+            <p>{{items.recipe.label}}</p>
+        </div>
+        <div class="imagebuttonBox">
+            <img class="recipeImage" src={{items.recipe.image}}>
+            <button class="heart material-icons" ng-click="$ctrl.addFav(items)">favorite_border</button>
+            <button class="makeBig material-icons" ng-click="$ctrl.moreRecipe(items);">add</button>
+        </div>
     </section>
+    </div>
 <!-- </div> -->
 
     <section class="moreInfo" ng-show="$ctrl.expandRecipe">
-        <p>{{$ctrl.expand.recipe.label}}</p>
-        <button class="heart" ng-click="$ctrl.addFav(items)">DYNAMITE</button>
-        <img src={{$ctrl.expand.recipe.image}}>
-        <p>Calories: {{$ctrl.expand.recipe.calories}}</p>
-        <p>Preptime: {{$ctrl.expand.totalTime}} minutes</p>
-        <p>Serving Size: {{$ctrl.expand.recipe.yield}}</p>
-        <p>Health Labels: {{$ctrl.expand.recipe.healthLabels}}</p>
-        <p>URL: <a href="{{$ctrl.expand.recipe.url}}">{{$ctrl.expand.recipe.url}}</a></p>
-        <button ng-click="$ctrl.hideRecipe()">X</button>
+        <div class="flexCloseButton">
+        <button class="closeButton" ng-click="$ctrl.hideRecipe()">X</button>
+        </div>
+        <div class="moreInfoContainer">
+            <div class="moreImage">
+                <img src={{$ctrl.expand.recipe.image}}>
+            </div>
+            <div class="moreRecipeCard">
+                <p class="expandedTitle">{{$ctrl.expand.recipe.label}}
+                        <button class="heart material-icons expandedHeart" ng-click="$ctrl.addFav(items)">favorite_border</button>
+                </p>
+                <p>Calories: {{$ctrl.expand.recipe.calories}}</p>
+                <p>Preptime: {{$ctrl.expand.totalTime}} minutes</p>
+                <p>Serving Size: {{$ctrl.expand.recipe.yield}}</p>
+                <p>Health Labels: {{$ctrl.expand.recipe.healthLabels}}</p>
+                <p>URL: <a href="{{$ctrl.expand.recipe.url}}">{{$ctrl.expand.recipe.url}}</a></p>
+            </div>
+        </div>
     </section>

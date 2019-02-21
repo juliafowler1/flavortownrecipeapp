@@ -1,8 +1,14 @@
 <h4 class="font-effect-fire-animation title">FUNKALICIOUS FAVORITES</h4>
     
-    <section ng-repeat="fav in $ctrl.favorites track by $index">
-    <p>{{fav.recipe.label}}</p>
-    <img src={{fav.recipe.image}}>
-    <p>URL: <a href="">{{fav.recipe.url}}</a></p>
-    <button ng-click="$ctrl.remFavs($index)">X</button>
+    <div class="recipeContainer">
+    <section class="recipeCard" ng-repeat="fav in $ctrl.favorites track by $index">
+        <div class="recipeTitle">
+            <p>{{fav.recipe.label}}</p>
+            <a href="{{fav.recipe.url}}">More Info</a>
+        </div>
+        <div class="imagebuttonBox">
+            <img  class="recipeImage" src={{fav.recipe.image}}>
+            <button class="makeBig material-icons" ng-click="$ctrl.remFavs($index)">clear</button>
+        </div>
     </section>
+    </div>
