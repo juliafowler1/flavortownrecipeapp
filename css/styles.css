@@ -1,20 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Faster+One&effect=fire-animation');
 @import url('https://fonts.googleapis.com/css?family=Faster+One%7CFugaz+One');
 
+
 html {
     font-family: 'Fugaz One', cursive;
     width: 100vw;
     height: 100vh;    
 
 }
+/* .bg{
+    display: flex;
+    flex-direction: row; */
+/* } */
+/* .recipe {
+    background-image: url("recipe.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+} */
+.navBar {
+    display: flex;
+    border: solid black;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+a {
+    color: #EC4E20;
+}
+a, p {
+    text-shadow: 1px 1px 8px gray;
+}
+.flavor {
+    text-align: center;
+}
 h4 {
     font-size: 4em;
-    padding-left: 50px;
     margin-bottom: 10px;
 }
 .searchCriteria {
-    border: solid green;
-    width: 60%;
+    /* border: solid green; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,13 +54,16 @@ h4 {
 .searchInput {
     width: 50%;
     border-radius: 15px;
-
+    height: 25px;
+    
 }
 
 button {
     font-family: 'Fugaz One', cursive;
     margin-top: 20px;
-    border-radius: 15px;
+    text-shadow: 1px 1px 8px gray;
+    /* border-radius: 15px;
+    height: 30px; */
 }
 
 
@@ -69,4 +100,8 @@ a {
 
 .recipeCard {
     border: solid red;
+}
+
+.heart:focus {
+background-color: red;
 }
