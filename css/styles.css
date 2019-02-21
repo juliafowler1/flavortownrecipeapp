@@ -8,25 +8,21 @@ html {
     height: 100vh;    
 
 }
-/* .bg{
-    display: flex;
-    flex-direction: row; */
-/* } */
-/* .recipe {
-    background-image: url("recipe.jpg");
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
 
-} */
 .navBar {
     display: flex;
-    border: solid black;
-    border-radius: 15px;
+    border: solid 1px black;
+    border-radius: 20px;
     text-align: center;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
+    font-size: 1.5em;
+    box-shadow: 1px 1px 8px gray;  
 }
+
+.navLinks:hover {
+    color:#F9692C;
+}
+
 a {
     color: #EC4E20;
 }
@@ -58,6 +54,24 @@ h4 {
     
 }
 
+
+#searchButton{
+    height: 45px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px gray;
+    margin-bottom: 10px;
+    font-size: 1em;
+    background-color: #fbfcf6;
+    border: solid black 1px;
+}
+
+#searchButton:hover {
+        background-color: #EC4E20;
+        color: white;
+}
+
+/* don't touch this, it works, leave it! */
 button {
     font-family: 'Fugaz One', cursive;
     margin-top: 20px;
@@ -88,18 +102,21 @@ a {
 }
 
 .moreInfo {
-    /* display: fixed; */
     z-index: 500;
     position: absolute;
-    background-color: white;
-    border: solid blue;
-    top: 0;
+    background-color: #f9f1cf;
+    border: solid black;
+    top: 50px;
+    right: 100px;
+    width: 60%;
+    border-radius: 1%;
 }
 
 
 
 .recipeCard {
-    border: solid red;
+    border: solid #EC4E20;
+    box-shadow: 1px 1px 8px gray; 
     height: 200px;
     width: 200px;
     display: flex;
@@ -111,20 +128,30 @@ a {
 
 .heart {
     height: 30px;
+    background-color: #fbfcf6;
+    border: solid black 1px;
+    border-radius: 50%;
 }
 
 .makeBig {
     height: 30px;
+    background-color: #fbfcf6;
+    border: solid black 1px;
+    border-radius: 50%;
 }
 
-.heart:focus {
-background-color: red;
+.heart:active {
+background-color: #F9692C;
+}
+
+.makeBig:active {
+    background-color: #F9692C;
 }
 
 .recipeContainer {
     height: 500px;
     width: 700px;
-    border: solid 1px purple;
+    /* border: solid 1px purple; */
     display: flex;
     flex-wrap: wrap;
 
@@ -136,11 +163,12 @@ background-color: red;
 }
 
 .imagebuttonBox {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     align-items: center;
     height: 50%;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .recipeTitle {
@@ -151,4 +179,39 @@ background-color: red;
 .title {
     margin-top: 20px;
     margin-left: 20px;
+}
+
+/* Expanded Info Styling!!!! */
+.flexCloseButton {
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: flex-end;
+}
+
+.closeButton {
+    float: right;
+    height: 30px;
+    margin-top: 0;
+}
+
+.moreInfoContainer {
+    display: flex;
+    height: 70%;
+}
+
+.moreImage {
+    width: 50%;
+    margin-bottom: -5px;
+}
+
+.expandedTitle {
+    margin-top: -5px;
+}
+
+.moreRecipeCard {
+    margin-left: 15px;
+}
+
+.expandedHeart {
+    margin-top: 0px;
 }
