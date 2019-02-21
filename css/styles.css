@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Faster+One&effect=fire-animation');
 @import url('https://fonts.googleapis.com/css?family=Faster+One%7CFugaz+One');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:500i');
 
 
 html {
@@ -45,6 +46,15 @@ h4 {
 }
 .restriction {
     margin-bottom: 10px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+
+}
+
+.recipeContainer p {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-style: italic;
 }
 
 .searchInput {

@@ -17,7 +17,7 @@
 
     <section class="moreInfo" ng-show="$ctrl.expandRecipe">
         <div class="flexCloseButton">
-        <button class="closeButton" ng-click="$ctrl.hideRecipe()">X</button>
+        <button class="closeButton material-icons makeBig" ng-click="$ctrl.hideRecipe()">clear</button>
         </div>
         <div class="moreInfoContainer">
             <div class="moreImage">
@@ -25,10 +25,9 @@
             </div>
             <div class="moreRecipeCard">
                 <p class="expandedTitle">{{$ctrl.expand.recipe.label}}
-                        <button class="heart material-icons expandedHeart" ng-click="$ctrl.addFav(items)">favorite_border</button>
+                        <button class="heart material-icons expandedHeart" ng-click="$ctrl.addFav($ctrl.expand)">favorite_border</button>
                 </p>
-                <p>Calories: {{$ctrl.expand.recipe.calories}}</p>
-                <p>Preptime: {{$ctrl.expand.totalTime}} minutes</p>
+                <p>Calories: {{$ctrl.expand.recipe.calories | number:0}}</p>
                 <p>Serving Size: {{$ctrl.expand.recipe.yield}}</p>
                 <p>Health Labels: {{$ctrl.expand.recipe.healthLabels}}</p>
                 <p>URL: <a href="{{$ctrl.expand.recipe.url}}">{{$ctrl.expand.recipe.url}}</a></p>
