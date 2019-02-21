@@ -1,0 +1,24 @@
+<div class="searchCriteria">
+
+        <h4 class="font-effect-fire-animation">WELCOME TO FLAVORTOWN</h4>
+    <p class="restriction">Search</p>
+    <input class="searchInput" type="text" ng-model="$ctrl.search">
+
+    <p class="restriction">Health restrictions:</p>
+    <select class="searchInput" ng-model="$ctrl.health">
+        <option value="0">Vegetarian</option>
+        <option value="1">Gluten-free</option>
+        <option value="2">Alcohol-free</option>
+        <option value="3">Peanut-free</option>
+    </select>
+
+    <p class="restriction">Dietary restrictions:</p>
+    <select class="searchInput" ng-model="$ctrl.diet">
+        <option value="0">Balanced</option>
+        <option value="1">Low-fat</option>
+        <option value="2">High-Protein</option>
+        <option value="3">Low-carb</option>
+    </select>
+
+    <button class="searchInput" ng-click="$ctrl.getApi();">Search</button>
+</div>
