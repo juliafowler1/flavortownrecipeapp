@@ -100,8 +100,55 @@ a {
 
 .recipeCard {
     border: solid red;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 5%;
+
+}
+
+.heart {
+    height: 30px;
+}
+
+.makeBig {
+    height: 30px;
 }
 
 .heart:focus {
 background-color: red;
+}
+
+.recipeContainer {
+    height: 500px;
+    width: 700px;
+    border: solid 1px purple;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.recipeImage {
+    height: 80px;
+    width: 80px;
+}
+
+.imagebuttonBox {
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+}
+
+.recipeTitle {
+    text-align: center;
+    height: 50%;
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 20px;
 }

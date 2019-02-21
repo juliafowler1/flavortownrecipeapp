@@ -1,13 +1,18 @@
 <!-- <div class="recipe"> -->
     <h4 class="font-effect-fire-animation title">RIGHTEOUS RECIPES</h4>
 
+    <div class="recipeContainer">
     <section class="recipeCard" ng-repeat="items in $ctrl.data.$$state.value.data.hits track by $index">
-        <p>{{items.recipe.label}}</p>
-        <button class="heart" ng-click="$ctrl.addFav(items)">DYNAMITE</button>
-        <img src={{items.recipe.image}}>
-        <p>URL: <a href="{{items.recipe.url}}">{{items.recipe.url}}</a></p>
-        <button ng-click="$ctrl.moreRecipe(items);">+</button>
+        <div class="recipeTitle">
+            <p>{{items.recipe.label}}</p>
+        </div>
+        <div class="imagebuttonBox">
+            <img class="recipeImage" src={{items.recipe.image}}>
+            <button class="heart" ng-click="$ctrl.addFav(items)">DYNAMITE</button>
+            <button class="makeBig" ng-click="$ctrl.moreRecipe(items);">+</button>
+        </div>
     </section>
+    </div>
 <!-- </div> -->
 
     <section class="moreInfo" ng-show="$ctrl.expandRecipe">
